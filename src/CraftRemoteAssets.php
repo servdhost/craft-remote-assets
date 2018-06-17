@@ -68,6 +68,6 @@ class CraftRemoteAssets extends Plugin
 
     protected function createSettingsModel()
     {
-        return new \servd\craftremoteassets\Settings();
+        return new \servd\craftremoteassets\models\Settings();
     }
 }
