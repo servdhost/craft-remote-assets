@@ -2,7 +2,7 @@
 
 Move CP assets to an external filesystem such as S3
 
-![Screenshot](resources/img/plugin-logo.png)
+Props to [yii-cdn-asset-management-library](https://github.com/2amigos/yii-cdn-asset-management-library)
 
 ## Requirements
 
