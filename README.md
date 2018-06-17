@@ -42,7 +42,7 @@ return [
         'root' => 'defaultKeyPrepend',
         'key' => 's3APIKey',
         'secret' => 's3APISecret'
-    ];
+    ]
 ];
 ```
 
