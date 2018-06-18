@@ -2,7 +2,7 @@
     "name": "servd/craft-remote-assets",
     "description": "Move CP assets to an external filesystem such as S3",
     "type": "craft-plugin",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "keywords": [
         "craft",
         "cms",
@@ -12,8 +12,8 @@
         "servd"
     ],
     "support": {
-        "docs": "https://github.com/servd/craft-remote-assets/blob/master/README.md",
-        "issues": "https://github.com/servd/craft-remote-assets/issues"
+        "docs": "https://github.com/servdhost/craft-remote-assets/blob/master/README.md",
+        "issues": "https://github.com/servdhost/craft-remote-assets/issues"
     },
     "license": "MIT",
     "authors": [
@@ -36,7 +36,7 @@
         "handle": "craft-remote-assets",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/servd/craft-remote-assets/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/servdhost/craft-remote-assets/master/CHANGELOG.md",
         "class": "servd\\craftremoteassets\\CraftRemoteAssets"
     }
 }
