@@ -36,7 +36,7 @@ class CraftRemoteAssets extends Plugin
 {
 
     public static $plugin;
-    public $schemaVersion = '0.1.3';
+    public $schemaVersion = '0.1.4';
 
     public function init()
     {
@@ -56,6 +56,20 @@ class CraftRemoteAssets extends Plugin
             return Craft::createObject($config);
         });
 
+        $settings = $this->getSettings();
+        if ($settings->preventDisable) {
+            Event::on(
+                Plugins::class,
+                Plugins::EVENT_BEFORE_DISABLE_PLUGIN,
+                function (PluginEvent $event) {
+                    if ($event->plugin === $this) {
+                        echo('Plugin can\'t be disabled');
+                        exit;
+                    }
+                }
+            );
+        }
+
         Craft::info(
             Craft::t(
                 'craft-remote-assets',
@@ -64,6 +78,15 @@ class CraftRemoteAssets extends Plugin
             ),
             __METHOD__
         );
+    }
+
+    public function beforeUninstall(): bool
+    {
+        $settings = $this->getSettings();
+        if ($settings->preventUninstall) {
+            return false;
+        }
+        return parent::beforeUninstall();
     }
 
     protected function createSettingsModel()

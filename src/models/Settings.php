@@ -21,6 +21,8 @@ class Settings extends Model
         'key' => '',
         'secret' => ''
     ];
+    public $preventUninstall = false;
+    public $preventDisable = false;
 
     public function rules()
     {
