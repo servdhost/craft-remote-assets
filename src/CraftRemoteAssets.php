@@ -36,7 +36,7 @@ class CraftRemoteAssets extends Plugin
 {
 
     public static $plugin;
-    public $schemaVersion = '0.1.4';
+    public $schemaVersion = '0.1.5';
 
     public function init()
     {
