@@ -16,18 +16,25 @@ class Settings extends Model
 {
     public $s3Config = [
         'region' => 'eu-west-1',
-        'bucket' => 'servd-assets',
-        'root' => 'noapp',
+        'bucket' => '',
+        'root' => '',
         'key' => '',
         'secret' => ''
     ];
+    public $gsConfig = [
+      'bucket' => '',
+      'root' => '',
+      'projectId' => '',
+      'keyFilePath' => ''
+    ];
+    public $use = 's3Config';
     public $preventUninstall = false;
     public $preventDisable = false;
 
     public function rules()
     {
         return [
-            [['s3Config'], 'required'],
+            [['use', 's3Config', 'gcConfig'], 'required'],
         ];
     }
 }

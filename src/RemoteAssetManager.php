@@ -14,24 +14,12 @@ use craft\web\AssetManager;
 use Exception;
 use Yii;
 use yii\helpers\FileHelper;
-use Aws\S3\S3Client;
 use Craft;
 
-/**
- * Class ResourceAssetManager
- *
- * @package fortrabbit\AssetBundler
- *
- * @property $modifiedFiles
- * @method getRevision()
- * @method updateRevisionIfModified()
- * @method updateRevisionTo($timestamp)
- */
 class RemoteAssetManager extends AssetManager
 {
 
     private $published = [];
-    private $s3;
     private $existingFiles = [];
     public $revision = 'norev';
     public $store;
@@ -39,7 +27,11 @@ class RemoteAssetManager extends AssetManager
     public function __construct(array $config = [])
     {
         parent::__construct($config);
-        $this->store = new S3RemoteAssetStore();
+        if(CraftRemoteAssets::getInstance()->getSettings()->use == 's3Config') {
+            $this->store = new S3RemoteAssetStore();
+        } else {
+            $this->store = new GoogleCloudRemoteAssetStore();
+        }
         $this->fillExistingFiles();
     }
 

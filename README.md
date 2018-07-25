@@ -36,17 +36,26 @@ Create a file at `config/craft-remote-assets.php` which looks like this:
 <?php
 
 return [
+    'use' => 's3Config',
     's3Config' => [
         'region' => 'eu-west-1',
         'bucket' => 'yourbucketname',
         'root' => 'defaultKeyPrepend',
         'key' => 's3APIKey',
         'secret' => 's3APISecret'
+    ],
+    'gsConfig' => [
+      'bucket' => 'yourbucketname',
+      'root' => 'defaultKeyPrepend',
+      'projectId' => 'yourProjectId',
+      'keyFilePath' => '/path/to/serviceworker/creds/file.json'
     ]
 ];
 ```
 
 Your S3 API key will need to be linked to an IAM user with bucket read and write permissions.
+
+Your Google Cloud cred sfile will need to belong to a service worker with read and write access to the bucket
 
 ## Using Craft Remote Assets
 
