@@ -2,7 +2,7 @@
     "name": "servd/craft-remote-assets",
     "description": "Move CP assets to an external filesystem such as S3",
     "type": "craft-plugin",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "keywords": [
         "craft",
         "cms",
