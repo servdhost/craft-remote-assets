@@ -2,7 +2,7 @@
     "name": "servd/craft-remote-assets",
     "description": "Move CP assets to an external filesystem such as S3",
     "type": "craft-plugin",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "keywords": [
         "craft",
         "cms",
@@ -25,7 +25,7 @@
     "require": {
         "craftcms/cms": "^3.0.0",
         "aws/aws-sdk-php": "^3.61.0",
-        "google/cloud-storage": "^1.4.0"
+        "google/cloud-storage": "^1.3.0"
     },
     "autoload": {
         "psr-4": {
