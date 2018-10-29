@@ -34,7 +34,7 @@ class Settings extends Model
     public function rules()
     {
         return [
-            [['use', 's3Config', 'gcConfig'], 'required'],
+            [['use', 's3Config', 'gsConfig'], 'required'],
         ];
     }
 }
