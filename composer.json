@@ -1,5 +1,5 @@
 {
-    "name": "mwcbrent/craft-remote-assets",
+    "name": "servd/craft-remote-assets",
     "description": "Move CP assets to an external filesystem such as S3",
     "type": "craft-plugin",
     "version": "0.1.8",
@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-          "mwcbrent\\craftremoteassets\\": "src/"
+          "servd\\craftremoteassets\\": "src/"
         }
     },
     "extra": {
@@ -38,6 +38,6 @@
         "hasCpSettings": false,
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/servdhost/craft-remote-assets/master/CHANGELOG.md",
-        "class": "mwcbrent\\craftremoteassets\\CraftRemoteAssets"
+        "class": "servd\\craftremoteassets\\CraftRemoteAssets"
     }
 }
