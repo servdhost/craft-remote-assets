@@ -38,6 +38,6 @@
         "hasCpSettings": false,
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/servdhost/craft-remote-assets/master/CHANGELOG.md",
-        "class": "servd\\craftremoteassets\\CraftRemoteAssets"
+        "class": "mwcbrent\\craftremoteassets\\CraftRemoteAssets"
     }
 }
