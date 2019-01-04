@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-          "servd\\craftremoteassets\\": "src/"
+          "mwcbrent\\craftremoteassets\\": "src/"
         }
     },
     "extra": {
