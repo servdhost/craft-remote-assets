@@ -53,8 +53,8 @@ class S3RemoteAssetStore
         $config = CraftRemoteAssets::getInstance()->getSettings()->s3Config;
 
         // If a CloudFront CDN URL has been provided, append only the 'root' and asset $key
-        if (isset($config['cloudfront_url'])) {
-            return $config['cloudfront_url'] . '/' .
+        if (isset($config['cloudfrontUrl'])) {
+            return $config['cloudfrontUrl'] . '/' .
                 $config['root'] . '/' .
                 $key;
         }
